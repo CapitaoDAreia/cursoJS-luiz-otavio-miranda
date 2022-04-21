@@ -17,3 +17,5 @@ Quando declaramos uma variável com VAR, nós podemos redeclarar esta mesma, o q
 ## Operadores Aritméticos
 - Precedência: <br> 
 () | Itens em parêntese<br> ** | Potenciação <br> *, / e % | Multiplicação, divisão e módulo<br>+ e - | Adição e subtração
+
+## Exercício 1 - Receba dois valores com prompt e retorne o resultado da adição destes valores para o usuário com alert.
