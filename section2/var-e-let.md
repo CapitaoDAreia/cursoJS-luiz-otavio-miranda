@@ -21,3 +21,9 @@ Quando declaramos uma variável com VAR, nós podemos redeclarar esta mesma, o q
 ## - Exercício 1 - Receba dois valores com prompt e retorne o resultado da adição destes valores para o usuário com alert.
 
 ## - Exercício 2 - Declare e atribua A, B, C. Onde A aponta para o valor de B, B aponta para o valor de C e C aponta para o valor de A.
+<br>
+<hr>
+
+## Mais sobre strings
+- ver trings.js
+
