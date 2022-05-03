@@ -13,7 +13,7 @@
 
 body {
   width: 100vw;
-  height: 150vh;
+  height: 100vh;
   background: var(--primary-color);
   font-family: 'Open sans', sans-serif;
   font-size: 1.1em;
@@ -24,9 +24,10 @@ body {
 }
 
 .container {
-  width: 90%;
+  margin-top: 5%;
+  width: 40%;
   max-width: 900px;
-  height: 80%;
+  height: 600px;
   padding: 10px;
   background: #fff;
   border-radius: 10px;
@@ -36,7 +37,7 @@ body {
                         "imc resultado"
                         "calculo calculo";
   grid-template-columns: 50% 50%;
-  grid-template-rows: 10% 60% 30% ;
+  grid-template-rows: 10% 30% 60% ;
 }
 #title-box{
   grid-area: title;
@@ -44,6 +45,9 @@ body {
 }
 #imc-box{
   grid-area: imc;
+}
+.resultado{
+  background-color: aqua;
 }
 #result-box{
   grid-area: resultado;
@@ -53,7 +57,7 @@ body {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-evenly;
 
   font-size: 10x;
@@ -70,4 +74,17 @@ body {
   background-color: var(--primary-color-darker);
   cursor: pointer;
 }
-
+#calculo-box > input[type="text"]{
+  height: 28px;
+  width: 100%;
+  text-align: center;
+  
+}
+#calculo-box > input[type="text"]:focus{
+  border: var(--primary-color) solid 3px;
+}
+@media (max-width: 350px) {
+  body{
+    font-size: .8rem;
+  }
+}
