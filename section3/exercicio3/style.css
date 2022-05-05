@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #065e5e;
+    color: #065e5e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+section{
+    background-color: #EEEEEE;
+    border-radius: 10px;
+}
+.pClass{
+    font-size: 40px;
+    padding: 40px;
+    animation: animation 8s 1000 cubic-bezier(0,-0.03, 1, 0.98) forwards;
+}
+
+@keyframes animation {
+    /* 0%{
+        font-size: 5px;
+        padding: 5px;
+    }
+    100%{
+        font-size: 40px;
+        padding: 40px; 
+    } */
+    0%{
+        transform: translateX(650px);
+    }
+    100%{
+        transform: translateX(-655px);
+    }
+}
