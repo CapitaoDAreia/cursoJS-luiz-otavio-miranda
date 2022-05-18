@@ -30,3 +30,7 @@ section div div input{
     width: 5rem;
     height: 2rem;
 }
+
+.timer-pausado{
+    color: #ff0000;
+}
