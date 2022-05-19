@@ -52,6 +52,9 @@ section:nth-child(2){
 }
 section>div{
     font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .timer-buttons{
@@ -61,6 +64,7 @@ section>div{
     width: 100px;
     height: 30px;
     border-radius: 10px;
+    cursor: pointer;
 }
 .close-function{
     display: none;
