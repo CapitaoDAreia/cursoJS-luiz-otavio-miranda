@@ -1,18 +1,20 @@
+/*
+    VARIABLES
+*/
 const clockElement = document.querySelector('#clock');
 const timerElement = document.querySelector('#timer');
 const displayHourClock = document.querySelector('#display-hour');
 const displayTimerClock = document.querySelector('#display-timer');
 const timerButtons = document.querySelector('.timer-buttons');
-
 run = document.querySelector('#run');
 pause = document.querySelector('#pause');
 myStop = document.querySelector('#stop');
-
-
-
 let increaseHour=1;
 let contador;
-
+let piscador = 1;
+/*
+    FUNCTIONS
+*/
 function clock() {
     displayTimerClock.classList.add('close-function')
     timerButtons.classList.add('timer-buttons')
@@ -30,8 +32,6 @@ function clock() {
     }, 1000)
 }
 
-
-
 function timer(){
     const displayHourTimer = document.querySelector('#display-hour');
     
@@ -48,13 +48,6 @@ function timer(){
         increaseHour++;
     }, 1000)
 };
-
-
-
-
-
-
-
 
 /*
     BUTTONS
@@ -75,7 +68,26 @@ timerElement.addEventListener('click', function(){
     Timer Buttons
 */
 run.addEventListener('click', function(){
+    displayTimerClock.style.opacity = "1";
+    clearInterval(piscador)
     timer()
 })
 
-pause.addEventListener('click')
+pause.addEventListener('click', function(){
+    clearInterval(contador)
+    piscador = setInterval(function(){
+        if(displayTimerClock.style.opacity == 0){
+            displayTimerClock.style.opacity = "1"
+        }else{
+            displayTimerClock.style.opacity = "0"
+        }
+    }, 1000)
+})
+
+myStop.addEventListener('click', function(){
+    clearInterval(piscador);
+    clearInterval(contador);
+    increaseHour = 1;
+    displayTimerClock.style.opacity = "1";
+    displayTimerClock.innerHTML = "00:00:00"
+})

@@ -66,7 +66,25 @@ section>div{
     border-radius: 10px;
     cursor: pointer;
 }
+.timer-buttons-style > input:hover{
+    background-color: #aaaaaa;
+}
+.timer-buttons-style > input:active{
+    background-color: #6e6e6e;
+}
 .close-function{
     display: none;
+}
+#message{
+    margin-top: 50px;
+    font-size: 30px;
+}
+@keyframes message {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
