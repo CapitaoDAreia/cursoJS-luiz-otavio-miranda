@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: auto;
+    background-color: #000029;
+    font-size: 25px;
+    padding: 10px;
+}
+body section{
+    margin: 0px auto;
+    padding: 10px;
+    width: 90vw;
+    background-color: #EEEEEE;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+.automatic-class{
+    color: red;
+}
