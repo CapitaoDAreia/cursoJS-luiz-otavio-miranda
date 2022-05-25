@@ -11,12 +11,15 @@ body{
     padding: 10px;
 }
 body section{
-    margin: 0px auto;
+    margin: 10px auto;
     padding: 10px;
     width: 90vw;
     background-color: #EEEEEE;
     max-height: 200px;
     overflow-y: scroll;
+}
+body section:nth-child(2){
+    overflow: hidden;
 }
 .automatic-class{
     color: red;
