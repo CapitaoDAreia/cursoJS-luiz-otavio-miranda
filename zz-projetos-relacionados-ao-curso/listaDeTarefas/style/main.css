@@ -1,3 +1,4 @@
+@import 'sidebar.css';
 *{
     padding: 0;
     margin: 0;
@@ -5,16 +6,18 @@
 }
 body{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(#010141, #000000 75%);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    padding: 10px;
 }
 .all{
     width: 50%;
-    height: 90%;
+    max-width: 500px;
+    min-height: 700px;
     background-color: #EEEEEE;
     border-radius: 10px;
     display: flex;
@@ -26,6 +29,16 @@ body{
 }
 .all div h1{
     padding: .4rem;
+}
+@media (max-width: 320px) {
+    .all{
+        width: 95%;
+    }
+}
+@media(max-width: 800px){
+    .all{
+        width: 90%;
+    }
 }
 .time{
     font-size: 1.5rem;
@@ -69,5 +82,45 @@ body{
     overflow-x: hidden;
 }
 .container > p{
-    border-bottom: #010141 1px solid;
+    transition: 1s;
+    border-top: #010141 1px solid;
+}
+.container > p:hover{
+    transition: 1s;
+    background-color: #3f3f7e;
+    color: #EEEEEE;
+}
+.delete-button{
+    width: 100px;
+    height: 30px;
+    margin-bottom: 5px;
+    color: #EEEEEE;
+    background-color: #7c0303;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.delete-button:hover{
+    background-color: #500101;
+}
+.delete-button:active{
+    background-color: #310101;
+}
+.window-alert{
+    transition: 1s;
+    opacity: 0;
+    width: 200px;
+    height: 100px;
+    position: fixed;
+    top: 10px;
+    left: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7c0303;
+    color: #EEEEEE;
+}
+.window-alert-dinamic{
+    transition: 1s;
+    opacity: 1;
 }
