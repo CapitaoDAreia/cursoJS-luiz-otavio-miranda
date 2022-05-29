@@ -62,6 +62,7 @@ function takeSavedTasks(){
 /*
 LISTENERS
 */
+
 //Add a new task and then do the same with other event
 button.addEventListener('click', function(){
     if(!text.value){
