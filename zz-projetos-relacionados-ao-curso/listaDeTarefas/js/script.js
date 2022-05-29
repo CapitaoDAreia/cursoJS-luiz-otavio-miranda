@@ -7,11 +7,10 @@ const button = document.querySelector('.addtask');
 const container = document.querySelector('.container');
 const windowAlert = document.querySelector('.window-alert');
 const arrayWithTasks = [];
-
 /*
     FUNCTIONS
 */
-//Clock
+//Runs the clock
 setInterval(function(){
     const date = new Date();
     const realDate = date.toLocaleString('pt-br', {
@@ -20,7 +19,6 @@ setInterval(function(){
     })
     time.innerHTML = realDate;
 }, 1000)
-
 //Create an element
 function createElement(element, content, myClass){
     const newElement = document.createElement(element);
@@ -61,14 +59,10 @@ function takeSavedTasks(){
         addElement(createElement('button', 'Delete', 'delete-button'))
     }
 }
-
-
-
-
 /*
 LISTENERS
 */
-//Add a new task
+//Add a new task and then do the same with other event
 button.addEventListener('click', function(){
     if(!text.value){
         alertErrorWindow('window-alert-dinamic', 'Add what?')
@@ -107,6 +101,7 @@ window.onbeforeunload = function(){
     saveTasks()
     saveTasksInLocal()
 }
+//Take saved data from the localStorage on window load
 window.addEventListener('load', function(){
     takeSavedTasks()
 })
