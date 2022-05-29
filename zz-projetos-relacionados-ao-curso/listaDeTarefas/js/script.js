@@ -52,6 +52,16 @@ function saveTasksInLocal(){
     const savedData = JSON.stringify(arrayWithTasks);
     localStorage.setItem('savedData', savedData);
 }
+//Open JSON archive in the localStorage and add the tasks
+function takeSavedTasks(){
+    const savedData = localStorage.getItem('savedData');
+    const savedDataToArray = JSON.parse(savedData);
+    for(let tasks of savedDataToArray){
+        addElement(createElement('p', tasks))
+        addElement(createElement('button', 'Delete', 'delete-button'))
+    }
+}
+
 
 
 
@@ -71,6 +81,20 @@ button.addEventListener('click', function(){
         }
     }
 })
+text.addEventListener('keypress', function(e){
+    if(e.charCode === 13){
+        if(!text.value){
+            alertErrorWindow('window-alert-dinamic', 'Add what?')
+        }else{
+            addElement(createElement('p',text.value))
+            addElement(createElement('button', 'Delete', 'delete-button'))
+            text.value = ""
+            if(window.innerWidth > 400){
+                text.focus()
+            }
+        }
+    }
+})
 //Remove previous added task
 document.addEventListener('click', function(e){
     if(e.target.classList.contains('delete-button')){
@@ -83,4 +107,8 @@ window.onbeforeunload = function(){
     saveTasks()
     saveTasksInLocal()
 }
+window.addEventListener('load', function(){
+    takeSavedTasks()
+})
+
 

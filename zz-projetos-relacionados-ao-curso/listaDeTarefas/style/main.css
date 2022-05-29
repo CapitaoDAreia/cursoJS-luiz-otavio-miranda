@@ -34,10 +34,22 @@ body{
     .all{
         width: 95%;
     }
+    .addtask:hover{
+        background-color: #010141;
+    }
+    .addtask:active{
+        background-color: #010141;
+    }
 }
 @media(max-width: 800px){
     .all{
         width: 90%;
+    }
+    .addtask:hover{
+        background-color: #010141;
+    }
+    .addtask:active{
+        background-color: #010141;
     }
 }
 .time{
@@ -75,6 +87,26 @@ body{
     transition: 0;
     color: #EEEEEE;
     background-color: #2d2d8d;
+}
+@media(max-width: 320px){
+    .addtask:hover{
+        background-color: #010141;
+        color: #EEEEEE;
+    }
+    .addtask:active{
+        background-color: #010141;
+        color: #EEEEEE;
+    }
+}
+@media(max-width: 900px){
+    .addtask:hover{
+        background-color: #010141;
+        color: #EEEEEE;
+    }
+    .addtask:active{
+        background-color: #010141;
+        color: #EEEEEE;
+    }
 }
 .container{
     height: 60%;
