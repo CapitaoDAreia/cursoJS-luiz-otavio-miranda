@@ -1,0 +1,22 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: #035353;
+  color: #EEEEEE;
+  display: flex;
+  justify-content: center;
+}
+.all-content{
+  margin: 20px 0px;
+  width: 40%;
+  max-width: 700px;
+  min-width: 200px;
+}
+.buttons{
+  margin-top: 10px;
+  width: 100%;
+  max-width: 700px;
+  min-width: 200px;
+  display: flex;
+  justify-content: space-evenly;
+}
