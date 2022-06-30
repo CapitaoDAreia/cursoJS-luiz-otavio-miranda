@@ -11,7 +11,7 @@
     Filhos herdam de pais.
     Filhos compartilham da mesma herança.
     Pais não herdam de filhos.
-    Filhos não herdam de filhos.
+    Filhos não herdam de filhos. 
 */
 
 //Classe Pai geradora
