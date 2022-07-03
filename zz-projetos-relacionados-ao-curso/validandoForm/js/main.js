@@ -32,7 +32,11 @@ function verificaUsuario(){
 function verificaSenha(){
     const campoSenha = document.querySelector('#senhaInput');
     const campoRepeteSenha = document.querySelector('#rSenhaInput');
-    if(campoSenha.value !== campoRepeteSenha.value ){
+    if(campoSenha.value.length < 6 || campoSenha.value.length > 12){
+        campoRepeteSenha.nextElementSibling.innerText = "A senha deve ter entre 6 e 12 caracteres."
+        campoRepeteSenha.nextElementSibling.classList.add('error')
+        return false;
+    }else if(campoSenha.value !== campoRepeteSenha.value ){
         campoRepeteSenha.nextElementSibling.innerText = "As senhas não coincidem."
         campoRepeteSenha.nextElementSibling.classList.add('error')
         return false;
@@ -42,12 +46,12 @@ function verificaSenha(){
     }
 }
 
-
-
 buttonSubmit.addEventListener('click', (e)=>{
     e.preventDefault()
     if(verificaVazio() !== false) return;
     if(verificaCPF() === false) return;
     if(verificaUsuario() !== true) return;
     if(verificaSenha() !== true) return;
+    const form1 = document.querySelector('#form1');
+    form1.submit()
 })

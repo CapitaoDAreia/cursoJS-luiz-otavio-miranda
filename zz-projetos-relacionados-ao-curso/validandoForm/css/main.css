@@ -12,11 +12,22 @@ body{
 }
 .container-form{
     width: 50%;
+    max-width: 700px;
 
     background-color: #EEEEEE;
     color: #000000;
     padding: 1rem;
     border-radius: 1rem;
+}
+@media (max-width: 300px) {
+    .container-form{
+        width: 90%;
+    }
+}
+@media (max-width: 400px) {
+    .container-form{
+        width: 85%;
+    }
 }
 .section2{
     margin-top: 1rem;
