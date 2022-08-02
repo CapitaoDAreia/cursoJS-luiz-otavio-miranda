@@ -4,8 +4,8 @@
 /*
     Promise.all - Tenta resolver todas promises passadas em um array e devolve um array com a resolução. Se uma delas cair em catch, retorna somente o erro.
     Promise.race - Retorna sempre a promise que se resolver/der erro primeiro.
-    romise.resolve 
-    Promise.reject
+    romise.resolve - Ver depois
+    Promise.reject - Ver depois
 */
 function rand(min, max){
     min*=1000;
@@ -51,4 +51,4 @@ Promise.race(promises).then(valor=>{
     console.log("Race: "+erro);
 });
 
-//
+//Promise 
