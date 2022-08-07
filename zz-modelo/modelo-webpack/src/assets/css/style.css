@@ -20,71 +20,12 @@ body {
   line-height: 1.5em;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
-}
-
-.container {
-  margin-top: 5%;
-  width: 40%;
-  max-width: 900px;
-  height: 600px;
-  padding: 10px;
-  background: #fff;
-  border-radius: 10px;
-  
-  display: grid;
-  grid-template-areas: "title title"
-                        "imc resultado"
-                        "calculo calculo";
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 10% 30% 60% ;
-}
-#title-box{
-  grid-area: title;
-  text-align: center;
-}
-#imc-box{
-  grid-area: imc;
-}
-.resultado{
-  background-color: aqua;
-}
-#result-box{
-  grid-area: resultado;
-}
-#calculo-box{
-  grid-area: calculo;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
 
-  font-size: 10x;
 }
-#calculo-box > input[type="button"]{
-  height: 30px;
-  width: 80px;
-  background-color: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+
+.container{
+  background-color: aliceblue;
+  padding: 10px;
 }
-#calculo-box > input[type="button"]:hover{
-  background-color: var(--primary-color-darker);
-  cursor: pointer;
-}
-#calculo-box > input[type="text"]{
-  height: 28px;
-  width: 100%;
-  text-align: center;
-  
-}
-#calculo-box > input[type="text"]:focus{
-  border: var(--primary-color) solid 3px;
-}
-@media (max-width: 350px) {
-  body{
-    font-size: .8rem;
-  }
-}
+
